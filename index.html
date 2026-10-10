@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PowerVerse - Toko Kekuatan Super</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="nav-container">
+    <a href="#home" class="logo">
+      ⚡ Power<span>Verse</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home">Beranda</a>
+      <a href="#menu">Kekuatan</a>
+      <a href="#tentang">Tentang</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="creator-badge">
+        👑 <span>Sofi_Zahro</span>
+      </div>
+
+      <button class="cart-button" id="open-cart">
+        🛒 Keranjang <span id="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <span class="tag">
+          ⚡ POWERVERSE BY SOFI_ZAHRO
+        </span>
+
+        <h1>
+          Siap punya<br>
+          kekuatan <span>super?</span>
+        </h1>
+
+        <p>
+          Temukan kekuatan super impianmu di PowerVerse!
+          Dari menghilang, berlari secepat kilat,
+          hingga mengendalikan waktu. Pilih kekuatanmu
+          dan jadilah legenda bersama Sofi_Zahro!
+        </p>
+
+        <a href="#menu" class="primary-button">
+          Jelajahi Kekuatan →
+        </a>
+
+        <div class="hero-info">
+
+          <div>
+            <strong>⚡ 30+</strong>
+            <small>Kekuatan Super</small>
+          </div>
+
+          <div>
+            <strong>💎 5 Tier</strong>
+            <small>Level Kelangkaan</small>
+          </div>
+
+          <div>
+            <strong>🔥 Mythic</strong>
+            <small>Kekuatan Legendaris</small>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="images/hero.jpg"
+          alt="Ilustrasi energi kosmik dan kekuatan super">
+
+        <div class="floating-card">
+          ⚡ Official PowerVerse by Sofi_Zahro
+        </div>
+      </div>
+
+    </section>
+
+    <!-- DAFTAR KEKUATAN -->
+    <section class="menu-section" id="menu">
+
+      <div class="section-header">
+
+        <div>
+          <span class="tag">TEMUKAN KEKUATANMU</span>
+
+          <h2>Pilih Kekuatan Super</h2>
+
+          <p>
+            Temukan kemampuan luar biasa yang cocok untukmu.
+          </p>
+        </div>
+
+        <div class="search-box">
+          <span>🔍</span>
+
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Cari kekuatan super...">
+        </div>
+
+      </div>
+
+      <!-- KATEGORI KEKUATAN -->
+      <div class="categories" id="categories">
+        <button class="category active" data-category="Semua">Semua</button>
+        <button class="category" data-category="Kecepatan">Kecepatan</button>
+        <button class="category" data-category="Elemen">Elemen</button>
+        <button class="category" data-category="Pikiran">Pikiran</button>
+        <button class="category" data-category="Ruang-Waktu">Ruang-Waktu</button>
+        <button class="category" data-category="Tubuh">Tubuh</button>
+        <button class="category" data-category="Langka">Langka</button>
+      </div>
+
+      <!-- PRODUK DITAMPILKAN OLEH JAVASCRIPT -->
+      <div class="power-grid" id="power-grid"></div>
+
+    </section>
+
+    <!-- TENTANG POWERVERSE -->
+    <section class="about-section" id="tentang">
+
+      <span class="tag">TENTANG POWERVERSE</span>
+
+      <h2>Dunia Baru, Kekuatan Tanpa Batas.</h2>
+
+      <p>
+        PowerVerse dikembangkan oleh <strong>Sofi_Zahro</strong> sebagai toko kekuatan super fiksi yang
+        menghadirkan berbagai kemampuan luar biasa.
+        Mulai dari berlari secepat kilat, menghilang,
+        mengendalikan elemen, hingga menghentikan waktu.
+        Temukan kekuatan favoritmu dan bangun legendamu!
+      </p>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <a href="#home" class="logo">
+      ⚡ Power<span>Verse</span>
+    </a>
+
+    <p>
+      © 2026 PowerVerse. Created with ❤️ by <strong>Sofi_Zahro</strong>.
+    </p>
+
+    <small>
+      Website fiksi karya Sofi_Zahro untuk keperluan pembelajaran.
+      Semua kekuatan dan transaksi hanya simulasi.
+    </small>
+
+  </footer>
+
+  <!-- OVERLAY KERANJANG -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- PANEL KERANJANG -->
+  <aside class="cart-panel" id="cart-panel">
+
+    <div class="cart-header">
+
+      <h2>🛒 Keranjang Kekuatan</h2>
+
+      <button
+        id="close-cart"
+        class="close-button"
+        aria-label="Tutup keranjang">
+        ✕
+      </button>
+
+    </div>
+
+    <div id="cart-items" class="cart-items"></div>
+
+    <div class="cart-footer">
+
+      <div class="total-row">
+        <span>Total Pembelian</span>
+        <strong id="cart-total">Rp0</strong>
+      </div>
+
+      <button
+        id="checkout-button"
+        class="primary-button full-width">
+        Beli Kekuatan →
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- FORM CHECKOUT -->
+  <div class="modal" id="checkout-modal">
+
+    <form id="checkout-form" class="checkout-form">
+
+      <div class="cart-header">
+
+        <h2>📝 Data Pembelian</h2>
+
+        <button
+          type="button"
+          id="close-checkout"
+          class="close-button"
+          aria-label="Tutup checkout">
+          ✕
+        </button>
+
+      </div>
+
+      <label for="customer-name">
+        Nama lengkap
+      </label>
+
+      <input
+        id="customer-name"
+        name="name"
+        type="text"
+        required
+        value="Sofi_Zahro"
+        placeholder="Masukkan nama kamu">
+
+      <label for="customer-phone">
+        Nomor HP
+      </label>
+
+      <input
+        id="customer-phone"
+        name="phone"
+        type="tel"
+        required
+        placeholder="08xxxxxxxxxx">
+
+      <label for="customer-address">
+        Alamat atau nama kota
+      </label>
+
+      <textarea
+        id="customer-address"
+        name="address"
+        required
+        placeholder="Masukkan alamat atau kota tujuan"></textarea>
+
+      <label for="payment-method">
+        Metode pembayaran simulasi
+      </label>
+
+      <select
+        id="payment-method"
+        name="payment"
+        required>
+
+        <option value="COD">
+          Bayar di tempat (COD)
+        </option>
+
+        <option value="Transfer">
+          Transfer bank
+        </option>
+
+        <option value="E-Wallet">
+          E-Wallet
+        </option>
+
+      </select>
+
+      <div class="total-row checkout-total">
+
+        <span>Total pembelian</span>
+
+        <strong id="checkout-total">
+          Rp0
+        </strong>
+
+      </div>
+
+      <button
+        class="primary-button full-width"
+        type="submit">
+        Konfirmasi Pembelian
+      </button>
+
+      <p class="form-note">
+        Demo website: kekuatan dan pembayaran hanya simulasi.
+        Tidak ada transaksi sungguhan.
+      </p>
+
+    </form>
+
+  </div>
+
+  <!-- NOTIFIKASI -->
+  <div id="toast" class="toast" role="status"></div>
+
+  <!-- JAVASCRIPT -->
+  <script src="main.js"></script>
+
+</body>
+</html>
